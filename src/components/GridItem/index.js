@@ -9,7 +9,9 @@ import {
 const GridItem = ({ item, onDelete }) => {
 
   const date = new Date(item.date);
+  date.setDate(date.getDate() + 1)
   const formated = (new Intl.DateTimeFormat('pt-br')).format(date);
+  console.log(formated)
 
   return (
     <C.Tr>
