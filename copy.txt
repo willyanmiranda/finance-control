@@ -1,0 +1,30 @@
+  const [currentMonth, setCurrentMonth] = useState()
+  const [filteredList, setFilteredList] = useState([])
+
+   const getCurrentMonth = () => {
+    let now = new Date();
+    setCurrentMonth(`${now.getFullYear()}-${now.getMonth()+1}`)
+    filterList(currentMonth)
+   }
+   console.log(currentMonth)
+
+   const filterList = (current) => {
+    let newList = [];
+    let month = current.getMonth();
+    
+    for(let i in transactionsList) {
+      if(transactionsList[i].date.getMonth() + 1 === parseInt(month)) {
+        newList.push(transactionsList[i])
+      }
+    }
+     setFilteredList(newList)
+
+   }
+
+   console.log(filteredList)
+
+
+
+
+   let datinha = transactionsList[0].date.split("-")[0]
+   console.log(datinha)
