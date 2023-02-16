@@ -14,17 +14,26 @@ const Resume = ({ income, expense, total }) => {
         title="Entradas"
         Icon={FaRegArrowAltCircleUp}
         value={income}
-        background={"#38b000"}
+        background={"#323238"}
         color={"#fff"}
+        colorIcon={"#00b37e"}
       />
       <ResumeItem
         title="Saídas"
         Icon={FaRegArrowAltCircleDown}
         value={expense}
-        background={"#ba181b"}
+        background={"#323238"}
         color={"#fff"}
+        colorIcon={"#f75a68"}
       />
-      <ResumeItem title="Total" Icon={FaDollarSign} value={total} background={"#003f88"} color={"#fff"}/>
+      <ResumeItem 
+        title="Total" 
+        Icon={FaDollarSign} 
+        value={total} 
+        background={"#015f43"} 
+        color={"#fff"}
+        colorIcon={"#fff"}
+      />
     </C.Container>
   );
 };

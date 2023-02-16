@@ -12,9 +12,10 @@ import {
   export const filterList = (currentMonth, transactionsList) => {
     let newList = [];
     let year = currentMonth.split("-")[0]
-    let month = currentMonth.split("-")[1]
+    let month = 0 + currentMonth.split("-")[1]
 
     for(let i in transactionsList) {
+      console.log(transactionsList[i].date.split("-")[1])
       if(transactionsList[i].date.split("-")[0] === year && transactionsList[i].date.split("-")[1] === month ) {
         newList.push(transactionsList[i])
       }
@@ -28,7 +29,7 @@ export const Months = (props) => {
     const formateDate = () => {
         let year = props.currentMonth.split("-")[0]
         let month = props.currentMonth.split("-")[1]
-        let months = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro']
+        let months = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
         return `${months[parseInt(month) - 1]} ${year}`
     }
 

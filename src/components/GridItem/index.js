@@ -20,13 +20,13 @@ const GridItem = ({ item, onDelete }) => {
       <C.Td>{`R$ ${item.amount},00`}</C.Td>
       <C.Td alignCenter>
         {item.expense ? (
-          <FaRegArrowAltCircleDown color="red" />
+          <FaRegArrowAltCircleDown color="f75a68" />
         ) : (
-          <FaRegArrowAltCircleUp color="green" />
+          <FaRegArrowAltCircleUp color="rgb(0, 179, 126)" />
         )}
       </C.Td>
       <C.Td alignCenter>
-        <FaTrash onClick={() => onDelete(item.id)} />
+        <FaTrash color="f75a68" onClick={() => onDelete(item.id)} />
       </C.Td>
     </C.Tr>
   );
